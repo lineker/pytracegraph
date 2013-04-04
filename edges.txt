@@ -1,0 +1,17 @@
+MsfConsole Console::Driver
+Console::Driver Config
+Console::Driver Simple::Framework
+Console::Driver DispatcherShell
+DispatcherShell Shell
+Simple::Framework Config
+Simple::Framework Logging
+Simple::Framework Core::Framework
+Core::Framework Jobcontainer
+Core::Framework ThreadManager
+Core::Framework PenetrationModuleManager
+Core::Framework SessionManager
+Core::Framework DBManager
+Core::Framework PluginManager
+Core::Framework EventDispatcher
+Core::Framework EventSubscriber
+EventDispatcher EventSubscriber

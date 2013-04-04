@@ -1,0 +1,16 @@
+MsfConsole (.*)/msfconsole(.*)
+Console::Driver (.*)/msf/ui/console/(.*)
+Simple::Framework (.*)/msf/base/(.*)
+Config (.*)/msf/base/config.rb
+Logging (.*)/msf/base/logging.rb
+DispatcherShell (.*)/rex/ui/text/dispatcher_shell.rb
+Shell (.*)/rex/ui/text/(.*)
+Jobcontainer (.*)/rex/job_container.rb
+ThreadManager (.*)/msf/core/(.*)thread(.*)
+PenetrationModuleManager (.*)/msf/core/(.*)module(.*)
+SessionManager (.*)/msf/core/(.*)session(.*)
+DBManager (.*)/msf/core/(.*)db(.*)
+PluginManager (.*)/msf/core/(.*)plugin(.*)
+EventDispatcher (.*)/msf/core/event_dispatcher.rb
+EventSubscriber (.*)/rex/ui/subscriber.rb
+Core::Framework (.*)/msf/core/framework.rb
