@@ -4,6 +4,8 @@ PyTraceGraph
 Generate graphs from any trace files
 
 # Requirements #
+	
+	* graphviz 
 	* pydot
 
 # Usage #
