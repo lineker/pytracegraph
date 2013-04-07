@@ -9,7 +9,9 @@ class pEdge:
 		self.pydotObject = None
 
 	def getPydotObj(self, origin):
-		return pydot.Edge(origin.getPydotObj(), self.destNode.getPydotObj(), style=self.type)
+		if not self.pydotObject:
+			self.pydotObject = pydot.Edge(origin.getPydotObj(), self.destNode.getPydotObj(), style=self.type) 
+		return self.pydotObject
 
 	def increaseCallCounts(self):
 		self.callcounts = self.callcounts + 1

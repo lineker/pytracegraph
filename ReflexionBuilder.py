@@ -4,10 +4,19 @@ class ReflexionBuilder:
 	def __init__(self, nodes):
 		self.currentNodes = nodes
 
-	def parseLine(self, line):
-		p1 = line.split()
-		return [p1[1].split(':')[0],p1[3].split(':')[0]]
+	def getCallerOrigin(self, line):
+		raise NotImplementedError( "Should have implemented this on child class" )
 
+	def getCallingDestination(self, line):
+		raise NotImplementedError( "Should have implemented this on child class" )
+
+	"""
+	absence (dotted), call that we expected to have but was not found in the artifacts.
+
+	divergence (dashed), artifact call that were not specified on the conceptual architecture
+
+	convergence (solid), match correctly
+	"""
 	def createEdge(self, nodeSrc, nodeDest):
 		#found a nodeDest in the NodeSrc Edge list
 		#change line to convergence, match correctly (solid)
@@ -37,10 +46,8 @@ class ReflexionBuilder:
 		try:
 			f = open(filename, 'r')
 			for line in f.readlines():
-				lineParsed = self.parseLine(line)
-				#print lineParsed
-				srcNode = self.getNodeForFilename(lineParsed[0])
-				destNode = self.getNodeForFilename(lineParsed[1])
+				srcNode = self.getNodeForFilename(self.getCallerOrigin(line))
+				destNode = self.getNodeForFilename(self.getCallingDestination(line))
 				if(srcNode and destNode):
 					self.createEdge(srcNode, destNode)
 
