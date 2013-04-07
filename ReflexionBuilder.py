@@ -1,8 +1,11 @@
 from Node import pEdge 
+
+#This is an abstract class, it should not be instantiated.
 class ReflexionBuilder:
 	#edgetype can take dotted, dashed, solid
-	def __init__(self, nodes):
+	def __init__(self, nodes, verbose):
 		self.currentNodes = nodes
+		self.verbose = verbose
 
 	def getCallerOrigin(self, line):
 		raise NotImplementedError( "Should have implemented this on child class" )
@@ -37,9 +40,9 @@ class ReflexionBuilder:
 		for key, node in self.currentNodes.items():
 			for regex in node.listValidRegex:
 				if(regex.search(filename.strip())):
-					print "Match! : " + filename + " -> " + key
+					if self.verbose: print "Match! : " + filename + " -> " + key
 					return node
-		print "NO Match! : " + filename		
+		if self.verbose: print "NO Match! : " + filename		
 		return None
 
 	def buildReflexion(self,filename):

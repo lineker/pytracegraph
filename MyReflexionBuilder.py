@@ -1,6 +1,7 @@
 from Node import pEdge 
 from ReflexionBuilder import ReflexionBuilder
 
+#Concrete implementation of class ReflexionBuilder
 class simpleReflexionBuilder( ReflexionBuilder ):
 
 	def getCallerOrigin(self, line):

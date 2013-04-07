@@ -1,8 +1,11 @@
 from Node import pNode, pEdge 
+
+#This is an abstract class, it should not be instantiated.
 class Parser( object ):
     """This is an abstract class for a Parse"""
-    def __init__(self):
+    def __init__(self,verbose):
     	self.parsedNodes = {}
+        self.verbose = verbose
 
     def openFile(self, filename):
         try:
@@ -22,6 +25,7 @@ class Parser( object ):
         raise NotImplementedError( "Should have implemented this" )
 
     def parseNodesFromFile( self, filename ):
+        if self.verbose: print 'parsing nodes from : %s' %(filename) 
         #For each line of file
         f = self.openFile(filename)
         if f is not None:
@@ -37,7 +41,7 @@ class Parser( object ):
         				self.parsedNodes[node.label] = node
 
     def parseEdgesFromFile( self, filename ):
-    	print 'parsing edges from : %s' %(filename) 
+    	if self.verbose: print 'parsing edges from : %s' %(filename) 
         f = self.openFile(filename)
         if f is not None:
         	#For each line of file
@@ -53,7 +57,7 @@ class Parser( object ):
         				#were found in parsedNodes
         				self.parsedNodes[currentEdge[0]].addEdge(pEdge(self.parsedNodes[currentEdge[1]]))
         			else:
-        				print "Found an Edge for Nodes that do not exist, ignoring..."
+        				if self.verbose: print "Found an Edge for Nodes that do not exist, ignoring..."
 
     def parse( self, NodesFilename, edgesFilename = "" ):
         if(NodesFilename is None):
