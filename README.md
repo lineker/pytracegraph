@@ -4,7 +4,7 @@ PyTraceGraph
 Generate graphs from any trace files
 
 # Requirements #
-	*pydot
+	* pydot
 
 # Usage #
 
@@ -12,7 +12,8 @@ Generate graphs from any trace files
 	`python pytracegraph.py -n nodes.txt -e edges.txt -p MyParser.simpleParser -w example3.png`
 
 **Generate reflexion model:**
-	`python pytracegraph.py -n nodes.txt -e edges.txt -p MyParser.simpleParser -w example3.png -r call_trace.txt -rp MyReflexionBuilder.simpleReflexionBuilder`
+	`python pytracegraph.py -n nodes.txt -e edges.txt -p MyParser.simpleParser -w example3.png 
+	 -r call_trace.txt -rp MyReflexionBuilder.simpleReflexionBuilder`
 
 PyTraceGraph Class Diagram
 -------
