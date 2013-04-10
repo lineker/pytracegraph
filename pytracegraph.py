@@ -35,10 +35,11 @@ if args['nodes'] and args['edges']:
 	#dynamic load of parser class
 	sp = my_import(p[0],p[1])
 	parser = sp(args['verbose']) #simpleParser()
-
+	print '==== BUILDING CONCEPTUAL MODEL ===='
 	mnodes = parser.parse(args['nodes'], args['edges'])
 
 	if args['reflexion']:
+		print '==== BUILDING REFLEXION MODEL ===='
 		buildReflexion(mnodes)
 
 	graph = pydot.Dot(graph_type='digraph')

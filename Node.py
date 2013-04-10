@@ -28,9 +28,10 @@ class pNode:
 		self.myEdges = {} 
 
 	def getPydotObj(self):
-		return pydot.Node(self.label)
+		return pydot.Node(self.label, shape="rect")
 
 	def addEdge(self,edge):
+		#print self.label + ' -> ' + edge.destNode.label + ' : ' + edge.type
 		self.myEdges[edge.destNode.label] = edge
 
 	def addValidRegex(self,regex):

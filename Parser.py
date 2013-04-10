@@ -51,6 +51,7 @@ class Parser( object ):
         		#print currentEdge
         		#if list is not empty
         		if(currentEdge and len(currentEdge) >= 2):
+
         			#Find Destinantion Node that match label
         			if(currentEdge[0] in self.parsedNodes and currentEdge[1] in self.parsedNodes):
         				#Add Edge and Type to origin Node if destination and origin node

@@ -1,0 +1,1286 @@
+==== BUILDING CONCEPTUAL MODEL ====
+parsing nodes from : nodes.txt
+['MsfConsole', '(.*)/msfconsole(.*)']
+['ConsoleDriver', '(.*)/msf/ui/console/(.*)']
+['SimpleFramework', '(.*)/msf/base/(.*)']
+['Config', '(.*)/msf/base/config.rb']
+['Logging', '(.*)/msf/base/logging.rb']
+['DispatcherShell', '(.*)/rex/ui/text/dispatcher_shell.rb']
+['Shell', '(.*)/rex/ui/text/(.*)']
+['Jobcontainer', '(.*)/rex/job_container.rb']
+['ThreadManager', '(.*)/msf/core/(.*)thread(.*)']
+['PenetrationModuleManager', '(.*)/msf/core/(.*)module(.*)']
+['SessionManager', '(.*)/msf/core/(.*)session(.*)']
+['DBManager', '(.*)/msf/core/(.*)db(.*)']
+['PluginManager', '(.*)/msf/core/(.*)plugin(.*)']
+['EventDispatcher', '(.*)/msf/core/event_dispatcher.rb']
+['EventSubscriber', '(.*)/rex/ui/subscriber.rb']
+['CoreFramework', '(.*)/msf/core/framework.rb']
+parsing edges from : edges.txt
+==== BUILDING REFLEXION MODEL ====
+Match! : /opt/metasploit/msf3/msfconsole -> MsfConsole
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+MsfConsole -> ConsoleDriver changed fromdottedto solid
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+ConsoleDriver -> Config changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+ConsoleDriver -> SimpleFramework changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+SimpleFramework -> CoreFramework changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/thread_manager.rb -> ThreadManager
+CoreFramework -> ThreadManager changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/core/thread_manager.rb -> ThreadManager
+Match! : /opt/metasploit/msf3/lib/msf/core/thread_manager.rb -> ThreadManager
+ThreadManager -> ThreadManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+CoreFramework -> EventDispatcher changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+CoreFramework -> PenetrationModuleManager changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+NO Match! : /opt/metasploit/msf3/lib/msf/core/payload_set.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/payload_set.rb
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+CoreFramework -> SessionManager changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+SessionManager -> SessionManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/thread_manager.rb -> ThreadManager
+SessionManager -> ThreadManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/thread_manager.rb -> ThreadManager
+SessionManager -> ThreadManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/thread_manager.rb -> ThreadManager
+SessionManager -> ThreadManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/thread_manager.rb -> ThreadManager
+SessionManager -> ThreadManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/thread_manager.rb -> ThreadManager
+SessionManager -> ThreadManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/thread_manager.rb -> ThreadManager
+SessionManager -> ThreadManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+NO Match! : /opt/metasploit/msf3/lib/msf/core/data_store.rb
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/rex/job_container.rb -> Jobcontainer
+CoreFramework -> Jobcontainer changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/plugin_manager.rb -> PluginManager
+CoreFramework -> PluginManager changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+CoreFramework -> DBManager changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+DBManager -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+DBManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+DBManager -> DBManager created line to dashed
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+DBManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+NO Match! : /opt/metasploit/msf3/lib/msf/core/task_manager.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/task_manager.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/task_manager.rb
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+NO Match! : /opt/metasploit/msf3/lib/msf/core/task_manager.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/task_manager.rb
+Match! : /opt/metasploit/msf3/lib/msf/core/thread_manager.rb -> ThreadManager
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+NO Match! : /opt/metasploit/msf3/lib/rex/thread_factory.rb
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+CoreFramework -> CoreFramework created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+EventDispatcher -> EventDispatcher created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+EventDispatcher -> EventDispatcher created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+EventDispatcher -> EventDispatcher created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+EventDispatcher -> EventDispatcher created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/framework.rb -> CoreFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+EventDispatcher -> EventDispatcher created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+SimpleFramework -> SimpleFramework created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+SimpleFramework -> SimpleFramework created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/statistics.rb -> SimpleFramework
+SimpleFramework -> SimpleFramework created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+SimpleFramework -> Config changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+Match! : /opt/metasploit/msf3/lib/msf/base/logging.rb -> Logging
+SimpleFramework -> Logging changed fromdottedto solid
+Match! : /opt/metasploit/msf3/lib/msf/base/logging.rb -> Logging
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Logging -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/logging.rb -> Logging
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/sinks/flatfile.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/task_manager.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/task_manager.rb
+Match! : /opt/metasploit/msf3/lib/msf/base/logging.rb -> Logging
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : <internal
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+Match! : /opt/metasploit/msf3/lib/msf/base/logging.rb -> Logging
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : <internal
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+Match! : /opt/metasploit/msf3/lib/msf/base/logging.rb -> Logging
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : <internal
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/logging/log_dispatcher.rb
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+SimpleFramework -> SimpleFramework created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+NO Match! : /opt/metasploit/msf3/lib/msf/core/data_store.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/data_store.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/simple/framework.rb -> SimpleFramework
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+SimpleFramework -> EventDispatcher created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+EventDispatcher -> EventDispatcher created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+NO Match! : /opt/metasploit/msf3/lib/msf/core/data_store.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/data_store.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/data_store.rb
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/dispatcher_shell.rb -> Shell
+ConsoleDriver -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/dispatcher_shell.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+ConsoleDriver -> ConsoleDriver created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+NO Match! : /opt/metasploit/msf3/lib/rex/parser/ini.rb
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/input.rb -> Shell
+ConsoleDriver -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output.rb -> Shell
+ConsoleDriver -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+ConsoleDriver -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/input.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+ConsoleDriver -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/input.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/input/readline.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/input/readline.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/input/readline.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+NO Match! : /opt/metasploit/msf3/lib/rbreadline.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/readline_compatible.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/shell.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/output/stdio.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+NO Match! : /opt/metasploit/msf3/lib/rex/compat.rb
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/color.rb -> Shell
+Shell -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/dispatcher_shell.rb -> Shell
+ConsoleDriver -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/dispatcher_shell.rb -> Shell
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/command_dispatcher/core.rb -> ConsoleDriver
+Shell -> ConsoleDriver created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/command_dispatcher/core.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/command_dispatcher.rb -> ConsoleDriver
+ConsoleDriver -> ConsoleDriver created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/command_dispatcher.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/dispatcher_shell.rb -> Shell
+ConsoleDriver -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/dispatcher_shell.rb -> Shell
+ConsoleDriver -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/dispatcher_shell.rb -> Shell
+NO Match! : /opt/metasploit/msf3/lib/msf/core/auxiliary/report.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/auxiliary/report.rb
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/command_dispatcher.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/command_dispatcher.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/rex/ui/text/dispatcher_shell.rb -> Shell
+ConsoleDriver -> Shell created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/framework_event_manager.rb -> ConsoleDriver
+ConsoleDriver -> ConsoleDriver created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/framework_event_manager.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+ConsoleDriver -> EventDispatcher created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+Match! : /opt/metasploit/msf3/lib/msf/core/event_dispatcher.rb -> EventDispatcher
+EventDispatcher -> EventDispatcher created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/psych.rb
+NO Match! : (eval)
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/psych.rb
+NO Match! : (eval)
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/psych.rb
+NO Match! : (eval)
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/psych.rb
+NO Match! : (eval)
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/psych.rb
+NO Match! : (eval)
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/psych.rb
+NO Match! : (eval)
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+ConsoleDriver -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+DBManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+DBManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+DBManager -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Match! : /opt/metasploit/msf3/lib/msf/base/config.rb -> Config
+Config -> Config created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/gemcache/ruby/1.9.1/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db.rb -> DBManager
+DBManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/db.rb -> DBManager
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/gemcache/ruby/1.9.1/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+NO Match! : /opt/metasploit/msf3/lib/gemcache/ruby/1.9.1/gems/activerecord-3.2.2/lib/active_record/attribute_methods.rb
+NO Match! : <internal
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+DBManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/ui/console/driver.rb -> ConsoleDriver
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+ConsoleDriver -> PenetrationModuleManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+Match! : /opt/metasploit/msf3/lib/msf/core/module_manager.rb -> PenetrationModuleManager
+PenetrationModuleManager -> PenetrationModuleManager created line to dashed
+NO Match! : /opt/metasploit/msf3/lib/gemcache/ruby/1.9.1/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/gemcache/ruby/1.9.1/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/gemcache/ruby/1.9.1/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+Match! : /opt/metasploit/msf3/lib/msf/core/db_manager.rb -> DBManager
+SessionManager -> DBManager created line to dashed
+Match! : /opt/metasploit/msf3/lib/msf/core/session_manager.rb -> SessionManager
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/msf3/lib/gemcache/ruby/1.9.1/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb
+NO Match! : /opt/metasploit/msf3/lib/msf/core/patches/active_record.rb
+NO Match! : /opt/metasploit/ruby/lib/ruby/1.9.1/thread.rb
+NO Match! : <internal
+Done

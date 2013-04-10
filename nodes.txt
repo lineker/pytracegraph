@@ -1,6 +1,6 @@
 MsfConsole (.*)/msfconsole(.*)
-Console::Driver (.*)/msf/ui/console/(.*)
-Simple::Framework (.*)/msf/base/(.*)
+ConsoleDriver (.*)/msf/ui/console/(.*)
+SimpleFramework (.*)/msf/base/(.*)
 Config (.*)/msf/base/config.rb
 Logging (.*)/msf/base/logging.rb
 DispatcherShell (.*)/rex/ui/text/dispatcher_shell.rb
@@ -13,4 +13,4 @@ DBManager (.*)/msf/core/(.*)db(.*)
 PluginManager (.*)/msf/core/(.*)plugin(.*)
 EventDispatcher (.*)/msf/core/event_dispatcher.rb
 EventSubscriber (.*)/rex/ui/subscriber.rb
-Core::Framework (.*)/msf/core/framework.rb
+CoreFramework (.*)/msf/core/framework.rb

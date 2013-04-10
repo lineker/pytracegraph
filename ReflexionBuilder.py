@@ -27,13 +27,17 @@ class ReflexionBuilder:
 		if nodeSrc.myEdges.has_key(nodeDest.label):
 			edge = nodeSrc.myEdges[nodeDest.label]
 			if edge.type == 'dotted':
+				if self.verbose: print nodeSrc.label + ' -> ' + nodeDest.label + ' changed from' + edge.type +'to solid';
 				edge.type = 'solid'
+				notfound = False
+			elif edge.type == 'solid':
 				notfound = False
 
 		#else,  artifact call were not specified on the conceptual architecture
 		#change line to divergence (dashed)
 		if notfound:
 			nodeSrc.addEdge(pEdge(nodeDest, 'dashed'))
+			if self.verbose: print nodeSrc.label + ' -> ' + nodeDest.label + ' created line to dashed';
 		return
 
 	def getNodeForFilename(self, filename):
